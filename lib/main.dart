@@ -7,8 +7,9 @@ void main() {
       body: Container(
         margin: EdgeInsets.all(15),
         child: TextField(
-          maxLength: 7,
-          keyboardType: TextInputType.number,
+          keyboardType: TextInputType.multiline,
+          minLines: 3,
+          maxLines: 5,
           decoration: InputDecoration(
             border: OutlineInputBorder(),
             // label: Text('First name'),
