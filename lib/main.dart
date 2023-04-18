@@ -1,8 +1,12 @@
 import 'package:flutter/material.dart';
 
-void fn() {}
+TextEditingController controller_ = TextEditingController(text: '1\n2\n3\n');
+
+void fn() {
+  print(controller_.text);
+}
+
 void main() {
-  TextEditingController controller_ = TextEditingController(text: '1\n2\n3\n');
   runApp(MaterialApp(
     debugShowCheckedModeBanner: false,
     home: Scaffold(
