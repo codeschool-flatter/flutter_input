@@ -3,7 +3,11 @@ import 'package:flutter/material.dart';
 TextEditingController controller_A = TextEditingController(text: '0');
 TextEditingController controller_B = TextEditingController(text: '0');
 
-void fn() {}
+void fn() {
+  String a = controller_A.text;
+  String b = controller_B.text;
+  print(int.parse(a) + int.parse(b));
+}
 
 void main() {
   runApp(MaterialApp(
