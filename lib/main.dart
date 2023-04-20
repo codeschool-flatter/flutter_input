@@ -42,6 +42,7 @@ void main() {
           const MyWidget(
             firstName: 'Zarif',
             lastName: 'Naxalov',
+            myicon: Icons.abc,
           )
         ],
       ),
