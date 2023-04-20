@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'widgets.dart';
 
 TextEditingController controller_A = TextEditingController(text: '0');
 TextEditingController controller_B = TextEditingController(text: '0');
@@ -21,6 +22,7 @@ void main() {
             child: TextField(
               controller: controller_A,
               decoration: const InputDecoration(
+                icon: Icon(Icons.home),
                 border: OutlineInputBorder(),
                 labelText: 'A',
               ),
@@ -36,7 +38,11 @@ void main() {
               ),
             ),
           ),
-          TextButton(onPressed: fn, child: Text('Button'))
+          TextButton(onPressed: fn, child: Text('Button')),
+          const MyWidget(
+            firstName: 'Zarif',
+            lastName: 'Naxalov',
+          )
         ],
       ),
     ),
