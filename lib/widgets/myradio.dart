@@ -8,11 +8,24 @@ class MyRadio extends StatefulWidget {
 }
 
 class _MyRadioState extends State<MyRadio> {
+  bool x1 = false;
+  String? food;
+  void log(value) {
+    print(value.toString());
+    setState(() {
+      food = value;
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Center(
       child: Column(
-        children: [Radio(value: 0, groupValue: 1, onChanged: (value) {})],
+        children: [
+          Radio(value: 'somsa', groupValue: food, onChanged: log),
+          Radio(value: 'osh', groupValue: food, onChanged: log),
+          Radio(value: 'shurvo', groupValue: food, onChanged: log),
+        ],
       ),
     );
   }
