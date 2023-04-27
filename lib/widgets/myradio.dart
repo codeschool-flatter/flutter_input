@@ -30,7 +30,11 @@ class _MyRadioState extends State<MyRadio> {
     return Center(
       child: Column(
         children: [
-          Radio(value: 'somsa', groupValue: food, onChanged: log),
+          RadioListTile(
+              title: Text('Somsa'),
+              value: 'somsa',
+              groupValue: food,
+              onChanged: log),
           Radio(value: 'osh', groupValue: food, onChanged: log),
           Radio(value: 'shurvo', groupValue: food, onChanged: log),
           Text('Price: $price'),
