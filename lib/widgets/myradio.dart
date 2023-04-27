@@ -10,7 +10,7 @@ class MyRadio extends StatefulWidget {
 class _MyRadioState extends State<MyRadio> {
   bool x1 = false;
 
-  String? food;
+  String food = '';
   int price = 0;
   void log(value) {
     int p = 0;
