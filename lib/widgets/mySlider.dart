@@ -10,12 +10,15 @@ class MySlider extends StatefulWidget {
 }
 
 class _MySliderState extends State<MySlider> {
+  double current = 0;
   @override
   Widget build(BuildContext context) {
     return Slider(
-      value: 0.5,
+      value: current,
       onChanged: (value) {
-        print(value);
+        setState(() {
+          current = value;
+        });
       },
     );
   }
