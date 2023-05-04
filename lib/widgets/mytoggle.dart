@@ -10,6 +10,7 @@ class MyToggle extends StatefulWidget {
 }
 
 class _MyToggleState extends State<MyToggle> {
+  List<bool> selected = [false, false];
   @override
   Widget build(BuildContext context) {
     return Center(
@@ -18,12 +19,11 @@ class _MyToggleState extends State<MyToggle> {
         Icon(Icons.home),
         Icon(Icons.school),
       ],
-      isSelected: <bool>[
-        true,
-        false,
-      ],
+      isSelected: selected,
       onPressed: (index) {
-        print(index);
+        setState(() {
+          selected[index] = !selected[index];
+        });
       },
     ));
   }
