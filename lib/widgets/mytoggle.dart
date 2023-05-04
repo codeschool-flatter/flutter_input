@@ -15,11 +15,12 @@ class _MyToggleState extends State<MyToggle> {
   Widget build(BuildContext context) {
     return Center(
         child: ToggleButtons(
-      children: [
+      children: const [
         Icon(Icons.home),
         Icon(Icons.school),
         Icon(Icons.work),
       ],
+      borderColor: Colors.redAccent,
       isSelected: selected,
       onPressed: (index) {
         setState(() {
